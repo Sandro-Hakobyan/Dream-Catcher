@@ -1,0 +1,145 @@
+:root {
+  --x: 45deg;
+}
+body {
+  background-color: #1c203b !important;
+  color: white !important;
+  padding: 50px;
+  font-family: Arial;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .main-page {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-page {
+    background-attachment: fixed;
+  }
+}
+
+.btnContainer a {
+  border-radius: 10px;
+  position: relative;
+  width: 170px;
+  height: 50px;
+  display: inline-block;
+  background: #fff;
+}
+.btnContainer a:before,
+.btnContainer a:after {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: 0.5s;
+  background: #f00;
+}
+.btnContainer a:nth-child(1):before,
+.btnContainer a:nth-child(1):after {
+  background: linear-gradient(var(--x), #4486a0, #0e1538, #7a598f);
+}
+
+.btnContainer a:hover:before {
+  inset: -3px;
+}
+.btnContainer a:hover:after {
+  inset: -3px;
+  filter: blur(10px);
+}
+.btnContainer a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #0e1538;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  border: 1px solid #040a29;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.task-card a{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 10px;
+  margin-left: 0;
+  padding: 10px;
+  width: 300px;
+  height: 160px;
+  background-color: #1c203b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.task-card a:before,
+.task-card a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  z-index: -1;
+  transition: 0.5s ;
+}
+
+.task-card a:nth-child(1):before,
+.task-card a:nth-child(1):after {
+  background: linear-gradient(var(--x), #4486a0, #0e1538, #7a598f);
+}
+
+
+.task-card a:after {
+  background: #4e1010;
+  transform: scale(0);
+  filter: blur(10px);
+}
+
+.task-card a:hover:after {
+  transform: scale(1.1);
+} 
+
+.task-card a div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.task-card h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.task-card h4 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.task-card p {
+  font-size: 1rem;
+  margin: 0;
+  color: #E8896D;
+}
